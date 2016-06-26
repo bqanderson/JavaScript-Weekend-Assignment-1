@@ -1,0 +1,13 @@
+body {
+	font: 0.75em Helvetica, sans-serif;
+	width: 60%;
+	margin: 40px auto 60px auto;
+	padding: 0;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-bottom: 1px solid #000;
+}
