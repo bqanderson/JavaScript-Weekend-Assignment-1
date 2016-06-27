@@ -48,12 +48,25 @@ function amountCovered(claim) {
 }
 
 for (var i = 0; i < initialList.length; i++) {
-  var newName = initialList[i].patientName;
-	console.log('Paid out $' + amountCovered(initialList[i]) + ' for ' + newName);
-}
-
-for (var i = 0; i < initialList.length; i++) {
 	totalPayedOut += amountCovered(initialList[i]);
 }
 
-console.log('For a total of $' + totalPayedOut + ' in Claims.');
+$(document).ready(function () {
+	for (var i = 1; i <= initialList.length; i++) {
+		$('li[id='+i+']').append('<h3><strong>Patient Name:</strong> '+initialList[i-1].patientName+'</h3> \n' +
+														'<p>Visit Cost: $'+initialList[i-1].visitCost+'</p> \n' +
+													 	'<p>Claim Type: '+initialList[i-1].visitType+'</p> \n' +
+													 	'<p>Percent Covered: ' + percentCovered(initialList[i-1]) + '% </p>' +
+													 	'<p>Paid Out: $' + amountCovered(initialList[i-1]) + '</p> \n'
+
+		);
+	}
+	$('.footer').append('<h2><strong>Total amount of claims paid: $' + totalPayedOut + '.<strong></h2>');
+
+	$('li').on('click', function() {
+		$(this).children('p').slideToggle('fast');
+	});
+
+
+
+});

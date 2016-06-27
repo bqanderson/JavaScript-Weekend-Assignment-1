@@ -3,6 +3,7 @@ body {
 	width: 60%;
 	margin: 40px auto 60px auto;
 	padding: 0;
+	color: #8C001A;
 }
 
 h1 {
@@ -10,4 +11,52 @@ h1 {
 	font-weight: lighter;
 	letter-spacing: 2px;
 	border-bottom: 1px solid #000;
+	margin-bottom: 15px
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  text-align: left;
+	border: 1px solid #8C001A;
+}
+
+li {
+	border-bottom: 1px solid #8C001A;
+  padding: 10px;
+}
+
+li.odd {
+	background-color: #deb887;
+}
+
+li:last-child {
+	border-bottom: 0px;
+}
+
+p {
+  background-color: #FFF;
+  display: none;
+	padding: 5px;
+	opacity: 0.7;
+}
+
+h3 {
+font-size: 1.25em;
+font-weight: lighter;
+margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-weight: 200;
+}
+
+.footer {
+	margin-top: 15px;
 }
